@@ -242,12 +242,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
   margin-bottom: 8px;
-}
-.features-item-icon {
-  margin-top: 24px;
-  margin-left: 100px;
 }
 .features-item-wrapper {
   margin-right: 0;
@@ -293,6 +288,7 @@ ul {
   gap: 24px;
 }
 .members-icon-list-icon {
+  list-style: none;
   width: 40px;
   height: 40px;
 }
@@ -310,6 +306,7 @@ ul {
 .members-item-icon-fb,
 .members-item-icon-in {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #f4f4fd;
 }
 
 .members-social-media {
@@ -387,6 +384,8 @@ ul {
 .portfolio-item:hover .portfolio-text-cover {
   transform: translate(0);
   transition: transform 300ms ease;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-picture-cover {
   position: relative;
@@ -409,6 +408,9 @@ ul {
   padding: 40px 32px;
   text-align: left;
   transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 .portfolio-picture {
   display: block;
@@ -429,9 +431,9 @@ ul {
 }
 .portfolio-description {
   font-size: 16px;
-  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  line-height: 1.5;
 }
 .footer {
   padding-top: 100px;
@@ -440,7 +442,44 @@ ul {
   text-align: left;
 }
 .footer .container {
-  text-align: left;
+  display: flex;
+  align-items: baseline;
+}
+.footer-content {
+  margin-right: 120px;
+  max-width: 264px;
+}
+.container-media {
+  max-width: 208px;
+}
+.footer-list {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+.footer-list-icon {
+  width: 40px;
+  height: 40px;
+}
+.footer-social-media {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-social-media:hover,
+.footer-social-media:focus {
+  background-color: #31d0aa;
+}
+.footer-item-icon-ig,
+.footer-item-icon-tw,
+.footer-item-icon-fb,
+.footer-item-icon-in {
+  fill: #f4f4fd;
 }
 .footer-logo {
   font-family: Raleway, sans-serif;
@@ -453,6 +492,14 @@ ul {
   color: #4d5ae5;
   text-decoration: none;
   display: inline-block;
+  margin-bottom: 16px;
+}
+.footer-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 .footer-logo-second-part {
