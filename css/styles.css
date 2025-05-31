@@ -443,6 +443,7 @@ ul {
 .footer .container {
   display: flex;
   align-items: baseline;
+  text-align: left;
 }
 .footer-content {
   margin-right: 120px;
