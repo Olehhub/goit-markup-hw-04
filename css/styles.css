@@ -66,6 +66,7 @@ ul {
   text-decoration: none;
   display: inline-block;
   padding: 24px 0;
+  position: relative;
 }
 .header-link:hover {
   font-weight: 500;
@@ -80,6 +81,16 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #404bbf;
+}
+.current::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 .header-address {
   margin-left: auto;
@@ -319,6 +330,40 @@ ul {
   text-decoration: none;
   background-color: #ffffff;
   width: calc((100% - 48px) / 3);
+  box-shadow: 0px 2px 1px 0px #2e2f4214, 0px 1px 1px 0px #2e2f4229,
+    0px 1px 6px 0px #2e2f4214;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-item:hover,
+.portfolio-item:focus-within {
+  box-shadow: 0px 4px 4px 0px #2e2f4214, 0px 2px 2px 0px #2e2f4229,
+    0px 2px 8px 0px #2e2f4214;
+}
+.portfolio-item:hover .portfolio-text-cover {
+  transform: translate(0);
+  transition: transform 300ms ease;
+}
+.portfolio-picture-cover {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-item .portfolio-picture-cover {
+  fill: #8e8f99;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-item .portfolio-picture-cover:hover,
+.portfolio-item .portfolio-picture-cover:focus {
+  fill: #4d5ae5;
+}
+.portfolio-text-cover {
+  position: absolute;
+  top: 0;
+  background-color: #4d5ae5;
+  color: #f4f4fd;
+  height: 100%;
+  padding: 40px 32px;
+  text-align: left;
+  transform: translateY(100%);
 }
 .portfolio-picture {
   display: block;
