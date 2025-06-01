@@ -34,8 +34,6 @@ ul {
 .header-navigation {
   align-items: center;
   display: flex;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 .header-logo {
   font-family: Raleway, sans-serif;
@@ -343,6 +341,7 @@ ul {
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
+  margin-bottom: 8px;
 }
 .portfolio {
   padding-top: 120px;
